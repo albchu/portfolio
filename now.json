@@ -1,6 +1,7 @@
 {
   "version": 2,
   "name": "albert-chu-portfolio",
+  "alias": ["albertchu.now.sh", "www.albertchu.now.sh"],
   "builds": [
     {
       "src": "package.json",
