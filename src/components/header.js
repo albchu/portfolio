@@ -12,7 +12,7 @@ const handleScrollShrink = setShrinkHeader => () =>
     ? setShrinkHeader(true)
     : setShrinkHeader(false);
 
-const Header = ({ siteTitle }) => {
+const Header = ({ siteTitle, siteSubtitle }) => {
   const [shrinkHeader, setShrinkHeader] = useState(false);
   const onScroll = handleScrollShrink(setShrinkHeader);
 
@@ -30,6 +30,9 @@ const Header = ({ siteTitle }) => {
         />
         <div className={classnames("title", shrinkHeader && "shrink")}>
           {siteTitle}
+        </div>
+        <div className={classnames("subtitle", shrinkHeader && "shrink")}>
+          {siteSubtitle}
         </div>
       </div>
     </header>

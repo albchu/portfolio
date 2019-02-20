@@ -39,7 +39,7 @@
 }
 
 .title {
-  transform: translate(200px, -110px);
+  transform: translate(190px, -130px);
   color: #0e4f75;
   font-size: 2em;
   text-decoration: none;
@@ -51,4 +51,18 @@
 .title.shrink {
   transform: translate(55px, -160px);
   font-size: 1em;
+}
+
+.subtitle {
+  transform: translate(190px, -100px);
+  color: #092a3d;
+  text-decoration: none;
+  font-family: "Roboto Condensed", sans-serif;
+  transition: all 0.8s ease-in-out;
+  -webkit-transition: all 0.8s ease-in-out;
+  -moz-transition: all 0.8s ease-in-out;
+}
+.subtitle.shrink {
+  transform: translate(55px, -120px);
+  opacity: 0;
 }

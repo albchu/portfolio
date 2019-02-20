@@ -12,13 +12,17 @@ const Layout = ({ children }) => (
         site {
           siteMetadata {
             title
+            profession
           }
         }
       }
     `}
     render={({ site }) => (
       <>
-        <Header siteTitle={site.siteMetadata.title} />
+        <Header
+          siteTitle={site.siteMetadata.title}
+          siteSubtitle={site.siteMetadata.profession}
+        />
         <div className="container">
           <main>{children}</main>
         </div>
