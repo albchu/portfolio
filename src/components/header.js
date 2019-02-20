@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import React, { useState, useEffect } from "react";
 import classnames from "classnames";
 import "./header.css";
+import Portrait from "./portrait";
 
 const SHRINK_THRESHOLD = 70;
 
@@ -23,7 +24,14 @@ const Header = ({ siteTitle }) => {
 
   return (
     <header className={classnames("header", shrinkHeader && "shrink")}>
-      <div className="title">{siteTitle}</div>
+      <div className="avatar">
+        <Portrait
+          className={classnames("portrait", shrinkHeader && "shrink")}
+        />
+        <div className={classnames("title", shrinkHeader && "shrink")}>
+          {siteTitle}
+        </div>
+      </div>
     </header>
   );
 };

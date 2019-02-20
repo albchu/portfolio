@@ -2,27 +2,53 @@
 
 .header {
   width: 100%;
-  padding: 60px 20vw;
+  padding: 2vw 2vw;
   background: #b33d64;
-  transition: all 0.4s ease-in-out;
-  -webkit-transition: all 0.4s ease-in-out;
-  -moz-transition: all 0.4s ease-in-out;
+  transition: all 0.8s ease-in-out;
+  -webkit-transition: all 0.8s ease-in-out;
+  -moz-transition: all 0.8s ease-in-out;
   z-index: 9999;
   top: 0;
   position: fixed;
-  font-size: 3em;
   font-weight: 600;
   box-shadow: 0px 30px 40px rgba(90, 8, 26, 0.26);
 }
-
-.shrink {
-  padding: 10px 15px;
-  font-size: 1.5em;
+.header.shrink {
+  padding-top: 0.3vw;
+  padding-left: 0.3vw;
   box-shadow: 0px 5px 10px rgba(90, 8, 26, 0.26);
+  max-height: 10%;
+}
+
+.portrait {
+  position: absolute;
+  top: 0;
+  width: 180px;
+  height: 180px;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  clip-path: circle(50% at center);
+}
+.portrait.shrink {
+  transform: translate(-60px, -60px) scale(0.2);
+}
+
+.avatar {
+  position: relative;
 }
 
 .title {
+  transform: translate(200px, -110px);
   color: #0e4f75;
+  font-size: 2em;
   text-decoration: none;
   font-family: "Roboto Condensed", sans-serif;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+}
+.title.shrink {
+  transform: translate(55px, -160px);
+  font-size: 1em;
 }
