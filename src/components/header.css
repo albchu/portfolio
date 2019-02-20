@@ -1,17 +1,28 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
+
 .header {
   width: 100%;
-  padding: 60px 60px;
-  background: #fff;
-  border-bottom: 1px solid #e1e1e1;
-  /* animation magic */
+  padding: 60px 20vw;
+  background: #b33d64;
   transition: all 0.4s ease-in-out;
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
   z-index: 9999;
   top: 0;
   position: fixed;
+  font-size: 3em;
+  font-weight: 600;
+  box-shadow: 0px 30px 40px rgba(90, 8, 26, 0.26);
 }
 
 .shrink {
   padding: 10px 15px;
+  font-size: 1.5em;
+  box-shadow: 0px 5px 10px rgba(90, 8, 26, 0.26);
+}
+
+.title {
+  color: #0e4f75;
+  text-decoration: none;
+  font-family: "Roboto Condensed", sans-serif;
 }

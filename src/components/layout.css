@@ -1,3 +1,13 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
+
+.container {
+  color: #e49023;
+  background-color: #002f4b;
+  font-family: "Josefin Sans", sans-serif;
+  max-width: 960;
+  padding: 175px 10px;
+}
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;

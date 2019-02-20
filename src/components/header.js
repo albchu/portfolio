@@ -4,8 +4,12 @@ import React, { useState, useEffect } from "react";
 import classnames from "classnames";
 import "./header.css";
 
+const SHRINK_THRESHOLD = 70;
+
 const handleScrollShrink = setShrinkHeader => () =>
-  window.scrollY > 100 ? setShrinkHeader(true) : setShrinkHeader(false);
+  window.scrollY > SHRINK_THRESHOLD
+    ? setShrinkHeader(true)
+    : setShrinkHeader(false);
 
 const Header = ({ siteTitle }) => {
   const [shrinkHeader, setShrinkHeader] = useState(false);
@@ -19,17 +23,7 @@ const Header = ({ siteTitle }) => {
 
   return (
     <header className={classnames("header", shrinkHeader && "shrink")}>
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+      <div className="title">{siteTitle}</div>
     </header>
   );
 };
