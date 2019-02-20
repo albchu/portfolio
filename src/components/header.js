@@ -1,42 +1,45 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import { Link } from "gatsby";
+import PropTypes from "prop-types";
+import React, { useState, useEffect } from "react";
+import classnames from "classnames";
+import "./header.css";
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
+const handleScrollShrink = setShrinkHeader => () =>
+  window.scrollY > 100 ? setShrinkHeader(true) : setShrinkHeader(false);
+
+const Header = ({ siteTitle }) => {
+  const [shrinkHeader, setShrinkHeader] = useState(false);
+  const onScroll = handleScrollShrink(setShrinkHeader);
+
+  useEffect(() => {
+    window.addEventListener("scroll", onScroll);
+
+    return () => window.removeEventListener("scroll", onScroll);
+  });
+
+  return (
+    <header className={classnames("header", shrinkHeader && "shrink")}>
       <h1 style={{ margin: 0 }}>
         <Link
           to="/"
           style={{
             color: `white`,
-            textDecoration: `none`,
+            textDecoration: `none`
           }}
         >
           {siteTitle}
         </Link>
       </h1>
-    </div>
-  </header>
-)
+    </header>
+  );
+};
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
+  siteTitle: PropTypes.string
+};
 
 Header.defaultProps = {
-  siteTitle: ``,
-}
+  siteTitle: ``
+};
 
-export default Header
+export default Header;
