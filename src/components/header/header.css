@@ -9,7 +9,6 @@
 
 .lockedHeader {
   position: fixed;
-  height: 14vw;
   width: 100vw;
   top: 0;
   z-index: 10;
@@ -74,6 +73,10 @@
     top: 4vw;
     font-size: 0.7em;
   }
+
+  .lockedHeader {
+    height: 12vw;
+  }
   .titleContainer {
     margin-left: 3vw;
     top: 10vw;
@@ -92,6 +95,10 @@
   .rolladex {
     top: 7vw;
     font-size: 0.4em;
+  }
+
+  .lockedHeader {
+    height: 14vw;
   }
   .shrink .rolladex {
     top: 0vw;
