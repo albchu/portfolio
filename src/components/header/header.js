@@ -3,7 +3,6 @@ import "./header.css";
 import Portrait from "../portrait";
 import Fade from "react-reveal/Fade";
 import classnames from "classnames";
-import Typist from "react-typist";
 
 const SHRINK_THRESHOLD = 600;
 
