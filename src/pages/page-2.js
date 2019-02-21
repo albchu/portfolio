@@ -7,7 +7,7 @@ import Header from "../components/header";
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <Header siteTitle={"Albert Chu"} siteSubtitle={"Full Stack Developer"} />
+    {/* <Header siteTitle={"Albert Chu"} siteSubtitle={"Full Stack Developer"} /> */}
     <div>
       <p>
         <strong>Scroll down to see the magic in action...</strong>
