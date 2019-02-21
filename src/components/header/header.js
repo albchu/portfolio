@@ -60,7 +60,7 @@ const Header = () => {
           </Fade>
         </div>
         <div className={classnames("titleContainer", shrinkHeader && "shrink")}>
-          <Fade delay={800}>Albert Chu</Fade>
+          <Fade>Albert Chu</Fade>
           <Rolladex
             className="rolladex"
             words={DESCRIPTORS}
