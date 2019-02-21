@@ -1,10 +1,22 @@
-.longHeader {
-  height: 1500px;
-  background-color: green;
-  bottom: 1em;
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
+
+.headerBasic {
+  background: #b33d64;
   transition: all 0.3s ease-out;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
+}
+
+.lockedHeader {
+  position: fixed;
+  height: 14vw;
+  width: 100vw;
+  top: 0;
+  z-index: 10;
+}
+
+.longHeader {
+  height: 1300px;
 }
 
 .portraitContainer {
@@ -17,35 +29,83 @@
   transition: all 0.3s ease-out;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
+  z-index: 11;
 }
 
 .portraitContainer.shrink {
-  margin-left: 0.5em;
-  top: 0.5em;
+  margin-left: 1vw;
+  position: fixed;
+  width: 10vw;
+  height: 10vw;
+}
+
+.titleContainer {
+  position: fixed;
+  display: inline-block;
+  color: #0e4f75;
+  white-space: nowrap;
+  font-size: 4em;
+  text-decoration: none;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  z-index: 11;
+}
+
+.titleContainer.shrink {
+  margin-left: 12vw;
+  position: fixed;
+  top: 4vw;
+  font-size: 2em;
+}
+
+.rolladex {
+  color: #0f2735;
+}
+
+.shrink .rolladex {
+  top: 0.6vw;
 }
 
 @media only screen and (min-width: 600px) {
+  .rolladex {
+    top: 4vw;
+    font-size: 0.7em;
+  }
+  .titleContainer {
+    margin-left: 3vw;
+    top: 10vw;
+  }
   .portraitContainer {
     width: 24vw;
     height: 24vw;
     margin-left: 20vw;
   }
-
   .portraitContainer.shrink {
-    width: 5vw;
-    height: 5vw;
+    top: 1vw;
   }
 }
 
 @media only screen and (max-width: 599px) {
+  .rolladex {
+    top: 7vw;
+    font-size: 0.4em;
+  }
+  .shrink .rolladex {
+    top: 0vw;
+  }
+  .titleContainer {
+    margin-left: -58vw;
+    top: 70vw;
+  }
   .portraitContainer {
     width: 50vw;
     height: 50vw;
-    margin-left: 25vw;
+    margin-left: 26vw;
   }
-
   .portraitContainer.shrink {
-    width: 10vw;
-    height: 10vw;
+    top: 2vw;
   }
 }

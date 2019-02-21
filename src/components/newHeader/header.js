@@ -3,44 +3,74 @@ import "./header.css";
 import Portrait from "../portrait";
 import Fade from "react-reveal/Fade";
 import classnames from "classnames";
+import Typist from "react-typist";
 
-const onScroll = setShrinkHeader => () => {
+const SHRINK_THRESHOLD = 600;
+
+const DESCRIPTORS = [
+  "Node.js",
+  "React",
+  "Backend",
+  "Frontend",
+  "UX Designer",
+  "Full Stack Developer"
+];
+
+const onScroll = (setShrinkHeader, setWordIndex) => () => {
   const scrolled = window.scrollY;
-  if (scrolled >= 200 && scrolled < 600) {
-    console.log("Time to transform", scrolled);
+  if (scrolled < SHRINK_THRESHOLD) {
     setShrinkHeader(false);
-  } else if (scrolled >= 600) {
-    console.log("Time to lock", scrolled);
+  } else if (scrolled >= SHRINK_THRESHOLD) {
     setShrinkHeader(true);
-  } else {
-    console.log("Time to expand and move to center", scrolled);
   }
+  const wordIndex = Math.floor(scrolled / 200);
+  wordIndex < DESCRIPTORS.length && setWordIndex(wordIndex);
 };
+
+const Rolladex = ({ words, wordIndex, className }) => (
+  <div className={className} style={{ position: "relative" }}>
+    {words.map((string, index) => (
+      <div style={{ position: "absolute", top: 0, left: 0 }}>
+        <Fade top opposite when={wordIndex === index}>
+          {string}
+        </Fade>
+      </div>
+    ))}
+  </div>
+);
 
 const Header = () => {
   const [shrinkHeader, setShrinkHeader] = useState(false);
+  const [wordIndex, setWordIndex] = useState(0);
 
   useEffect(() => {
-    const handleScroll = onScroll(setShrinkHeader);
+    const handleScroll = onScroll(setShrinkHeader, setWordIndex);
     window.addEventListener("scroll", handleScroll);
 
     return () => window.removeEventListener("scroll", handleScroll);
   });
-  console.log("shrinkHeader", shrinkHeader);
+
   return (
-    <div className={classnames("longHeader")}>
-      <div
-        className={classnames("portraitContainer", shrinkHeader && "shrink")}
-      >
-        <Fade>
-          <Portrait />
-        </Fade>
+    <>
+      <div className={classnames("longHeader", "headerBasic")}>
+        <div
+          className={classnames("portraitContainer", shrinkHeader && "shrink")}
+        >
+          <Fade>
+            <Portrait />
+          </Fade>
+        </div>
+        <div className={classnames("titleContainer", shrinkHeader && "shrink")}>
+          <Fade delay={800}>Albert Chu</Fade>
+          <Rolladex
+            className="rolladex"
+            words={DESCRIPTORS}
+            wordIndex={wordIndex}
+          />
+        </div>
       </div>
-      {/* <div>
-        <h1>Albert Chu</h1>
-        <h3>Full Stacked</h3>
-      </div> */}
-    </div>
+      <div className={classnames("lockedHeader", "headerBasic")} />
+    </>
   );
 };
 

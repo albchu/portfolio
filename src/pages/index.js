@@ -2,13 +2,13 @@ import React from "react";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import Header from "../components/header";
+import Header from "../components/newHeader";
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <Header siteTitle={"Albert Chu"} siteSubtitle={"Full Stack Developer"} />
     <div>
+      <Header />
       <p>
         <strong>Scroll down to see the magic in action...</strong>
       </p>
