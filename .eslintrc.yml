@@ -1,0 +1,166 @@
+parser: babel-eslint
+
+extends:
+  - airbnb
+  - plugin:prettier/recommended
+  - prettier/react
+  - plugin:react/recommended
+  - react-app
+
+env:
+  browser: true
+  node: true
+  jest: true
+  es6: true
+
+plugins:
+  - react
+  - import
+
+parserOptions:
+  ecmaVersion: 7
+  sourceType: module
+  ecmaFeatures:
+    jsx: true
+
+settings:
+  import/resolver:
+    webpack:
+      config: "./config/webpack.config.dev.js"
+
+overrides:
+  - files:
+      - "*.test.js"
+    rules:
+      max-lines:
+        - error
+        - 200
+      max-nested-callbacks: 0
+      max-params: 0
+      max-statements: 0
+      react/prop-types: 0
+
+rules:
+  prettier/prettier:
+    - error
+    - singleQuote: true
+  linebreak-style:
+    - off
+  max-lines:
+    - off
+  max-depth:
+    - error
+    - 3
+  max-params: 0
+  max-nested-callbacks:
+    - error
+    - 2
+  complexity:
+    - off
+  no-else-return: error
+  no-lonely-if: error
+  no-param-reassign: error
+  no-undef: error
+  no-plusplus: 0
+  no-nested-ternary: 0
+  no-continue: 0
+  no-restricted-syntax: 0
+  no-confusing-arrow: 0
+  no-console: 1
+  no-restricted-imports:
+    - error
+    - patterns:
+        - "**/../core/**"
+  no-duplicate-imports: error
+  no-unused-vars: error
+  no-unused-expressions: 0
+  no-use-before-define: 0
+  no-underscore-dangle: 0
+  no-process-env: error
+  no-var: error
+
+  object-shorthand: error
+  function-paren-newline: 0
+  class-methods-use-this: 0
+  newline-per-chained-call: 0
+  prefer-template: error
+  prefer-destructuring: error
+  prefer-spread: error
+  prefer-arrow-callback: error
+
+  padding-line-between-statements:
+    - error
+    - blankLine: always
+      prev:
+        - const
+        - let
+        - var
+        - import
+      next: "*"
+    - blankLine: any
+      prev:
+        - const
+        - let
+        - var
+        - import
+      next:
+        - const
+        - let
+        - var
+        - import
+    - blankLine: always
+      prev: directive
+      next: "*"
+    - blankLine: any
+      prev: directive
+      next: directive
+    - blankLine: always
+      prev: "*"
+      next: return
+
+  import/no-named-default: error
+  import/no-named-as-default: 0
+  import/no-dynamic-require: 0
+  import/no-extraneous-dependencies: 0
+  import/imports-first: error
+  import/first: error
+  import/newline-after-import: error
+  import/namespace: error
+  import/no-absolute-path: error
+  import/no-duplicates: error
+  import/no-useless-path-segments: error
+  import/no-self-import: error
+  import/no-cycle: error
+  import/no-named-as-default-member: error
+  import/no-mutable-exports: error
+  import/export: error
+  import/named: error
+  import/default: error
+  import/no-internal-modules: 0
+  import/no-namespace: off
+  import/no-webpack-loader-syntax: 0
+  import/prefer-default-export: 0
+
+  react/jsx-filename-extension: 0
+  react/jsx-no-target-blank: 0
+  react/jsx-pascal-case: error
+  react/jsx-handler-names: 0
+  react/jsx-no-duplicate-props: error
+  react/jsx-no-bind: error
+  react/jsx-max-depth:
+    - error
+    - max: 4
+  react/forbid-prop-types: off
+  react/prefer-stateless-function: error
+  react/require-default-props: 0
+  react/require-extension: 0
+  react/self-closing-comp: 0
+  react/display-name: off
+  react/no-unused-prop-types: error
+  react/no-set-state: error
+  react/no-deprecated: error
+  react/no-this-in-sfc: error
+  react/no-typos: error
+  react/no-multi-comp: error
+  react/no-direct-mutation-state: error
+  react/no-children-prop: error

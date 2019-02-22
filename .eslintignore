@@ -1,0 +1,3 @@
+src/util/serviceWorker.js
+config/[webpack|paths]*.js
+config/**/jest/**
