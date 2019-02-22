@@ -4,7 +4,7 @@ import Fade from 'react-reveal/Fade';
 import classnames from 'classnames';
 import Portrait from '../portrait';
 
-const SHRINK_THRESHOLD = 600;
+const SHRINK_THRESHOLD = 300;
 
 const DESCRIPTORS = ['Node.js', 'React', 'UX', 'Full Stack Developer'];
 
@@ -56,7 +56,9 @@ const Header = () => {
           </Fade>
         </div>
         <div className={classnames('titleContainer', shrinkHeader && 'shrink')}>
-          <Fade>Albert Chu</Fade>
+          <Fade>
+            <div className="name">Albert Chu</div>
+          </Fade>
           <Rolladex
             className="rolladex"
             words={DESCRIPTORS}

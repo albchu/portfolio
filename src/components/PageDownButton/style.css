@@ -1,7 +1,8 @@
 .pageDownButton {
   position: fixed;
-  left: 50vw;
-  bottom: 3vw;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: 10px;
   color: black;
   width: 5vw;
   height: 5vw;
@@ -10,7 +11,19 @@
   -moz-transition: all 0.3s ease-out;
 }
 
-.pageDownButton:hover {
+.pageDownButton:active {
   color: white;
-  transform: translateY(15px) scale(1.2);
+  bottom: 0px;
+}
+
+@media only screen and (max-width: 800px) {
+  .pageDownButton {
+    height: 15vw;
+    width: 10vw;
+    bottom: -10px;
+  }
+
+  .pageDownButton:active {
+    bottom: -20px;
+  }
 }

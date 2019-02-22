@@ -2,9 +2,6 @@
 
 .headerBasic {
   background: #b33d64;
-  transition: all 0.3s ease-out;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
 }
 
 .lockedHeader {
@@ -15,7 +12,7 @@
 }
 
 .longHeader {
-  height: 900px;
+  height: 700px;
 }
 
 .portraitContainer {
@@ -47,16 +44,15 @@
   text-decoration: none;
   font-family: "Roboto Condensed", sans-serif;
   font-weight: 600;
-  transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
   z-index: 11;
 }
 
 .titleContainer.shrink {
   margin-left: 12vw;
   position: fixed;
-  top: 4vw;
   font-size: 2em;
 }
 
@@ -66,14 +62,18 @@
 
 .shrink .rolladex {
   top: 0.6vw;
+  font-size: 2.5vw;
 }
 
-@media only screen and (min-width: 600px) {
+.shrink .name {
+  font-size: 5vw;
+}
+
+@media only screen and (min-width: 801px) {
   .rolladex {
     top: 4vw;
     font-size: 0.7em;
   }
-
   .lockedHeader {
     height: 12vw;
   }
@@ -89,6 +89,43 @@
   .portraitContainer.shrink {
     top: 1vw;
   }
+  .titleContainer.shrink {
+    top: 4vw;
+  }
+  .shrink .rolladex {
+    top: 1vw;
+    font-size: 60%;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+  .rolladex {
+    top: 4vw;
+    font-size: 0.7em;
+  }
+  .lockedHeader {
+    height: 12vw;
+  }
+  .titleContainer {
+    margin-left: 3vw;
+    top: 10vw;
+  }
+  .titleContainer.shrink {
+    top: 3vw;
+  }
+  .portraitContainer {
+    width: 24vw;
+    height: 24vw;
+    margin-left: 20vw;
+  }
+  .portraitContainer.shrink {
+    top: 1vw;
+  }
+
+  .shrink .rolladex {
+    top: 0.2vw;
+    font-size: 2.5vw;
+  }
 }
 
 @media only screen and (max-width: 599px) {
@@ -96,12 +133,14 @@
     top: 7vw;
     font-size: 0.4em;
   }
-
+  .titleContainer.shrink {
+    top: 3vw;
+  }
   .lockedHeader {
     height: 14vw;
   }
   .shrink .rolladex {
-    top: 0vw;
+    top: -1vw;
   }
   .titleContainer {
     margin-left: -58vw;
@@ -114,5 +153,18 @@
   }
   .portraitContainer.shrink {
     top: 2vw;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .shrink .rolladex {
+    top: -3vw;
+  }
+  .titleContainer.shrink {
+    top: 3vw;
+  }
+
+  .titleContainer {
+    margin-left: -63vw;
   }
 }
