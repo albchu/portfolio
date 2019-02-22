@@ -24,7 +24,7 @@ const onScroll = (setShrinkHeader, setWordIndex) => () => {
 const Rolladex = ({ words, wordIndex, className }) => (
   <div className={className} style={{ position: 'relative' }}>
     {words.map((string, index) => (
-      <div style={{ position: 'absolute', top: 0, left: 0 }}>
+      <div key={string} style={{ position: 'absolute', top: 0, left: 0 }}>
         <Fade top opposite when={wordIndex === index}>
           {string}
         </Fade>
