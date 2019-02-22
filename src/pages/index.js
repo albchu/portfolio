@@ -1,14 +1,16 @@
-import React from "react";
+import React from 'react';
 
-import Layout from "../components/layout";
-import SEO from "../components/seo";
-import Header from "../components/header";
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import Header from '../components/Header';
+import PageDownButton from '../components/PageDownButton/PageDownButton';
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <div>
       <Header />
+      <PageDownButton />
       <p>
         <strong>Scroll down to see the magic in action...</strong>
       </p>
