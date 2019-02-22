@@ -23,11 +23,6 @@ parserOptions:
   ecmaFeatures:
     jsx: true
 
-settings:
-  import/resolver:
-    webpack:
-      config: "./config/webpack.config.dev.js"
-
 overrides:
   - files:
       - "*.test.js"
