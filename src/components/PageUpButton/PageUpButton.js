@@ -1,11 +1,15 @@
 import React from 'react';
+import classnames from 'classnames';
 import { animateScroll as scroll } from 'react-scroll';
 import UpButton from './UpButton';
 import './PageUpButton.css';
 
-const PageUpButton = ({ className }) => {
+const PageUpButton = ({ className, disable }) => {
   return (
-    <UpButton className={className} onClick={() => scroll.scrollMore(210)} />
+    <UpButton
+      className={classnames('pageButton', disable && 'disable')}
+      onClick={() => !disable && scroll.scrollMore(700)}
+    />
   );
 };
 
