@@ -4,6 +4,7 @@ import Fade from 'react-reveal/Fade';
 import classnames from 'classnames';
 import Portrait from '../portrait';
 import PageUpButton from '../PageUpButton';
+import Drawer from '../Drawer';
 
 const SHRINK_THRESHOLD = 300;
 
@@ -71,6 +72,7 @@ const Header = () => {
             wordIndex={wordIndex}
           />
         </div>
+        <Drawer />
       </div>
       <div className="lockedHeader headerBasic">
         <PageUpButton
