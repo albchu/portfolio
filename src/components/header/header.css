@@ -1,18 +1,18 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
 
-.pageDownButton:hover {
+.pageButton:hover {
   color: white;
 }
 
-.pageDownButton:active {
+.pageButton:active {
   color: white;
 }
 
-.pageDownButton.shrink {
+.pageButton.shrink {
   opacity: 0;
 }
 
-.pageDownButton {
+.pageButton {
   width: 5vw;
   height: 5vw;
   z-index: 99;
@@ -106,7 +106,36 @@
   font-size: 5vw;
 }
 
-@media only screen and (min-width: 801px) {
+@media only screen and (min-width: 1300px) {
+  .rolladex {
+    top: 4vw;
+    font-size: 0.7em;
+  }
+  .lockedHeader {
+    height: 12vw;
+  }
+  .titleContainer {
+    margin-left: 3vw;
+    top: 10vw;
+  }
+  .portraitContainer {
+    width: 24vw;
+    height: 24vw;
+    margin-left: 20vw;
+  }
+  .portraitContainer.shrink {
+    top: 1vw;
+  }
+  .titleContainer.shrink {
+    top: 4vw;
+  }
+  .shrink .rolladex {
+    top: 2vw;
+    font-size: 80%;
+  }
+}
+
+@media only screen and (min-width: 801px) and (max-width: 1299px) {
   .rolladex {
     top: 4vw;
     font-size: 0.7em;
@@ -191,7 +220,7 @@
   .portraitContainer.shrink {
     top: 2vw;
   }
-  .pageDownButton {
+  .pageButton {
     width: 10vw;
     height: 10vw;
   }
@@ -209,7 +238,7 @@
     margin-left: -63vw;
   }
 
-  .pageDownButton {
+  .pageButton {
     width: 15vw;
     height: 15vw;
   }

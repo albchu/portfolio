@@ -1,6 +1,6 @@
 import React from 'react';
 import { animateScroll as scroll } from 'react-scroll';
-import DownButton from '../DownButton';
+import DownButton from './DownButton';
 
 const PageDownButton = ({ className }) => {
   return (

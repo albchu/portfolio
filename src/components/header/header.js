@@ -3,7 +3,7 @@ import './header.css';
 import Fade from 'react-reveal/Fade';
 import classnames from 'classnames';
 import Portrait from '../portrait';
-import PageDownButton from '../PageDownButton';
+import PageUpButton from '../PageUpButton';
 
 const SHRINK_THRESHOLD = 300;
 
@@ -73,8 +73,8 @@ const Header = () => {
         </div>
       </div>
       <div className="lockedHeader headerBasic">
-        <PageDownButton
-          className={classnames('pageDownButton', shrinkHeader && 'shrink')}
+        <PageUpButton
+          className={classnames('pageButton', shrinkHeader && 'shrink')}
         />
       </div>
     </>
