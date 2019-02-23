@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Albert Chu`,
-    profession: "Full Stack Developer",
+    profession: 'Full Stack Developer',
     description: `A portfolio website for Albert Chu showcasing some of the projects he has worked on.`,
     author: `@gatsbyjs`
   },
@@ -24,7 +24,7 @@ module.exports = {
         start_url: `/`,
         background_color: `#b33d64`,
         theme_color: `#b33d64`,
-        display: `minimal-ui`,
+        display: `standalone`,
         icon: `src/images/favicon.png` // This path is relative to the root of the site.
       }
     }
