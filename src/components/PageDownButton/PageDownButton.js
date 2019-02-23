@@ -1,14 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { animateScroll as scroll } from 'react-scroll';
 import DownButton from '../DownButton';
-import './style.css';
 
-const PageDownButton = () => {
+const PageDownButton = ({ className }) => {
   return (
-    <DownButton
-      className="pageDownButton"
-      onClick={() => scroll.scrollMore(210)}
-    />
+    <DownButton className={className} onClick={() => scroll.scrollMore(210)} />
   );
 };
 

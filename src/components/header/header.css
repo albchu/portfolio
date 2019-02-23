@@ -1,14 +1,41 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
 
+.pageDownButton:hover {
+  color: white;
+}
+
+.pageDownButton:active {
+  color: white;
+}
+
+.pageDownButton.shrink {
+  opacity: 0;
+}
+
+.pageDownButton {
+  width: 5vw;
+  height: 5vw;
+  z-index: 99;
+  color: black;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+}
+
 .headerBasic {
   background: #b33d64;
 }
 
 .lockedHeader {
-  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
   width: 100vw;
   top: 0;
+  bottom: 0;
   z-index: 10;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
 
 .longHeader {
@@ -33,6 +60,16 @@
   position: fixed;
   width: 10vw;
   height: 10vw;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
 }
 
 .titleContainer {
@@ -154,6 +191,10 @@
   .portraitContainer.shrink {
     top: 2vw;
   }
+  .pageDownButton {
+    width: 10vw;
+    height: 10vw;
+  }
 }
 
 @media only screen and (max-width: 400px) {
@@ -166,5 +207,10 @@
 
   .titleContainer {
     margin-left: -63vw;
+  }
+
+  .pageDownButton {
+    width: 15vw;
+    height: 15vw;
   }
 }
