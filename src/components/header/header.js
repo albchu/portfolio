@@ -5,6 +5,7 @@ import classnames from 'classnames';
 import Portrait from '../portrait';
 import PageUpButton from '../PageUpButton';
 import Drawer from '../Drawer';
+import Rolladex from '../Rolladex';
 
 const SHRINK_THRESHOLD = 300;
 
@@ -22,18 +23,6 @@ const onScroll = (setShrinkHeader, setWordIndex) => () => {
 
   wordIndex < DESCRIPTORS.length && setWordIndex(wordIndex);
 };
-
-const Rolladex = ({ words, wordIndex, className }) => (
-  <div className={className} style={{ position: 'relative' }}>
-    {words.map((string, index) => (
-      <div key={string} style={{ position: 'absolute', top: 0, left: 0 }}>
-        <Fade top opposite when={wordIndex === index}>
-          {string}
-        </Fade>
-      </div>
-    ))}
-  </div>
-);
 
 const Header = () => {
   const [shrinkHeader, setShrinkHeader] = useState(false);
@@ -72,13 +61,11 @@ const Header = () => {
             wordIndex={wordIndex}
           />
         </div>
-        <Drawer />
       </div>
       <div className="lockedHeader headerBasic">
-        <PageUpButton
-          className={classnames('pageButton', shrinkHeader && 'shrink')}
-        />
+        <PageUpButton disable={shrinkHeader} />
       </div>
+      <Drawer showButton={shrinkHeader} />
     </>
   );
 };

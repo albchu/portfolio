@@ -1,0 +1,55 @@
+.drawerButtonIcon:active {
+  color: white;
+}
+
+.drawerButtonIcon.showButton {
+  opacity: 1;
+}
+
+.drawerButtonIcon.showButton.drawerOpen {
+  opacity: 0;
+}
+
+.drawerButtonIcon {
+  width: 5vw;
+  height: 5vw;
+  z-index: 99;
+  color: black;
+  transition: color 0.3s ease-out, opacity 1s ease-in-out;
+  -webkit-transition: color 0.3s ease-out, opacity 1s ease-in-out;
+  -moz-transition: color 0.3s ease-out, opacity 1s ease-in-out;
+  opacity: 0;
+  position: fixed;
+  top: 3vw;
+  right: 4%;
+}
+
+.drawerRightSidePanel {
+  width: 25vw;
+  transform: translateX(-25vw);
+  height: 100vh;
+  color: rgb(212, 212, 212);
+  top: 0%;
+  position: fixed;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  z-index: 10;
+  background: #b33d64;
+}
+.drawerRightSidePanel.isOpen {
+  transform: translateX(0vw);
+}
+
+.drawerContents {
+  transform: translateY(14vw);
+  text-align: right;
+  padding-right: 2vw;
+}
+
+@media only screen and (max-width: 400px) {
+  .drawerRightSidePanel {
+    width: 70vw;
+    transform: translateX(-70vw);
+  }
+}
