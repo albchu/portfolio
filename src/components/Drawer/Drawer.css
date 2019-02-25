@@ -30,17 +30,22 @@
   height: 100vh;
   color: rgb(212, 212, 212);
   top: 0%;
-  transition: all 0.6s cubic-bezier(0.14, 0.83, 0.49, 1.01);
-  -webkit-transition: all 0.6s cubic-bezier(0.14, 0.83, 0.49, 1.01);
-  -moz-transition: all 0.6s cubic-bezier(0.14, 0.83, 0.49, 1.01);
+  transition: all 0.4s cubic-bezier(0.14, 0.83, 0.49, 1.01),
+    opacity 0.4s ease-out;
+  -webkit-transition: all 0.4s cubic-bezier(0.14, 0.83, 0.49, 1.01),
+    opacity 0.4s ease-out;
+  -moz-transition: all 0.4s cubic-bezier(0.14, 0.83, 0.49, 1.01),
+    opacity 0.4s ease-out;
   z-index: 9;
   background: #b33d64;
   position: fixed;
   top: 12vw;
+  opacity: 0;
 }
 
 .drawerRightSidePanel.isOpen {
   transform: translateY(0vh);
+  opacity: 1;
   position: -webkit-sticky;
   position: sticky;
 }
@@ -51,6 +56,7 @@
 
 .drawerContents {
   text-align: right;
+  z-index: 9;
   display: flex;
   flex-direction: column;
 }
@@ -58,7 +64,6 @@
 @media only screen and (max-width: 800px) {
   .drawerRightSidePanel {
     width: 50vw;
-    transform: translateX(-50vw);
   }
 }
 
@@ -68,11 +73,5 @@
     height: 7vw;
     top: 4vw;
     right: 5%;
-  }
-}
-
-@media only screen and (max-width: 599px) {
-  .drawerRightSidePanel {
-    top: 14vw;
   }
 }
