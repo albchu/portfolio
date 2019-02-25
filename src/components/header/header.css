@@ -21,8 +21,7 @@
 }
 
 .portraitContainer {
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   display: inline-block;
   margin-bottom: 25px;
   top: 2em;
@@ -38,7 +37,6 @@
 
 .portraitContainer.shrink {
   margin-left: 1vw;
-  position: fixed;
   width: 10vw;
   height: 10vw;
   top: 1vw;
