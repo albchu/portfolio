@@ -40,12 +40,10 @@
   background: #b33d64;
   position: fixed;
   top: 12vw;
-  opacity: 0;
 }
 
 .drawerRightSidePanel.isOpen {
   transform: translateY(0vh);
-  opacity: 1;
   position: -webkit-sticky;
   position: sticky;
 }
