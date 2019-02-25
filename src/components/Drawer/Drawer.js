@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { IoIosMenu } from 'react-icons/io';
 import './Drawer.css';
 import classnames from 'classnames';
+import DrawerItem from './DrawerItem';
 
 const Drawer = ({ className, showButton }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,10 +15,7 @@ const Drawer = ({ className, showButton }) => {
       !buttonRef.current.contains(event.target) &&
       isOpen
     ) {
-      console.log('Drawer is open and clicked away');
       setIsOpen(false);
-    } else {
-      console.log('Clicked inside the drawer');
     }
   };
 
@@ -43,7 +41,14 @@ const Drawer = ({ className, showButton }) => {
         ref={panelRef}
         className={classnames('drawerRightSidePanel', isOpen && 'isOpen')}
       >
-        <div className="drawerContents">Coming Soon!</div>
+        <div className="drawerContents" onClick={() => setIsOpen(false)}>
+          <DrawerItem onClick={() => console.log('close mee22')}>
+            About
+          </DrawerItem>
+          <DrawerItem>Portfolio</DrawerItem>
+          <DrawerItem>Social Media</DrawerItem>
+          <DrawerItem>Contact</DrawerItem>
+        </div>
       </div>
     </div>
   );

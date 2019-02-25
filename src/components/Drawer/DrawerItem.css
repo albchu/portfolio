@@ -1,0 +1,39 @@
+.drawerItemBasic {
+  width: 100%;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  height: 8vh;
+  color: black;
+  font-size: 1em;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out, font-size 0.1s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out, font-size 0.1s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out, font-size 0.1s ease-in-out;
+  white-space: nowrap;
+  z-index: 15;
+}
+
+.drawerItemBasic:active {
+  transform: translateY(5px);
+  color: rgb(190, 190, 190);
+  transition: all 0.05s ease-in-out;
+  -webkit-transition: all 0.05s ease-in-out;
+  -moz-transition: all 0.05s ease-in-out;
+}
+
+@media (hover: hover) {
+  .drawerItemBasic:hover {
+    font-size: 1.5em;
+    transform: translateX(-1vw);
+    color: rgb(190, 190, 190);
+    font-weight: 700;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .drawerItemBasic {
+    width: 100%;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+    font-size: 2em;
+  }
+}
