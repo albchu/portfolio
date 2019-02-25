@@ -8,7 +8,7 @@ const PageUpButton = ({ className, disable }) => {
   return (
     <UpButton
       className={classnames('pageButton', disable && 'disable')}
-      onClick={() => !disable && scroll.scrollMore(700)}
+      onClick={() => !disable && scroll.scrollMore(775)}
     />
   );
 };

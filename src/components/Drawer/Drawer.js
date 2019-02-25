@@ -26,7 +26,7 @@ const Drawer = ({ className, showButton }) => {
   });
 
   return (
-    <div>
+    <>
       <div ref={buttonRef}>
         <IoIosMenu
           onClick={() => showButton && setIsOpen(true)}
@@ -54,7 +54,7 @@ const Drawer = ({ className, showButton }) => {
           <DrawerItem>Contact</DrawerItem>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
