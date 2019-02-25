@@ -46,21 +46,22 @@ const Header = () => {
             <Portrait />
           </Fade>
         </div>
-        <div
-          className={classnames(
-            'titleContainer noselect',
-            shrinkHeader && 'shrink'
-          )}
-        >
-          <Fade>
-            <div className="name">Albert Chu</div>
-          </Fade>
-          <Rolladex
-            className="rolladex"
-            words={DESCRIPTORS}
-            wordIndex={wordIndex}
-          />
-        </div>
+      </div>
+
+      <div
+        className={classnames(
+          'titleContainer noselect',
+          shrinkHeader && 'shrink'
+        )}
+      >
+        <Fade>
+          <div className="name">Albert Chu</div>
+        </Fade>
+        <Rolladex
+          className="rolladex"
+          words={DESCRIPTORS}
+          wordIndex={wordIndex}
+        />
       </div>
       <div className="lockedHeader headerBasic">
         <PageUpButton disable={shrinkHeader} />

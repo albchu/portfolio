@@ -31,6 +31,9 @@
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   z-index: 11;
+  width: 24vw;
+  height: 24vw;
+  margin-left: 20vw;
 }
 
 .portraitContainer.shrink {
@@ -38,6 +41,7 @@
   position: fixed;
   width: 10vw;
   height: 10vw;
+  top: 1vw;
 }
 
 .noselect {
@@ -63,54 +67,34 @@
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
   z-index: 11;
+  margin-left: 48vw;
+  top: 10vw;
 }
 
 .titleContainer.shrink {
   margin-left: 12vw;
   position: fixed;
   font-size: 2em;
+  top: 4vw;
 }
 
 .rolladex {
   color: #0f2735;
+  top: 4vw;
+  font-size: 0.7em;
 }
 
 .shrink .rolladex {
-  top: 0.6vw;
-  font-size: 2.5vw;
+  top: 2vw;
+  font-size: 80%;
 }
 
 .shrink .name {
   font-size: 5vw;
 }
 
-@media only screen and (min-width: 1300px) {
-  .rolladex {
-    top: 4vw;
-    font-size: 0.7em;
-  }
-  .lockedHeader {
-    height: 12vw;
-  }
-  .titleContainer {
-    margin-left: 3vw;
-    top: 10vw;
-  }
-  .portraitContainer {
-    width: 24vw;
-    height: 24vw;
-    margin-left: 20vw;
-  }
-  .portraitContainer.shrink {
-    top: 1vw;
-  }
-  .titleContainer.shrink {
-    top: 4vw;
-  }
-  .shrink .rolladex {
-    top: 2vw;
-    font-size: 80%;
-  }
+.lockedHeader {
+  height: 12vw;
 }
 
 @media only screen and (min-width: 801px) and (max-width: 1299px) {
@@ -120,10 +104,6 @@
   }
   .lockedHeader {
     height: 12vw;
-  }
-  .titleContainer {
-    margin-left: 3vw;
-    top: 10vw;
   }
   .portraitContainer {
     width: 24vw;
@@ -150,10 +130,7 @@
   .lockedHeader {
     height: 12vw;
   }
-  .titleContainer {
-    margin-left: 3vw;
-    top: 10vw;
-  }
+
   .titleContainer.shrink {
     top: 3vw;
   }
@@ -185,9 +162,10 @@
   }
   .shrink .rolladex {
     top: -1vw;
+    font-size: 0.4em;
   }
   .titleContainer {
-    margin-left: -58vw;
+    margin-left: 22vw;
     top: 70vw;
   }
   .portraitContainer {
@@ -202,13 +180,14 @@
 
 @media only screen and (max-width: 400px) {
   .shrink .rolladex {
-    top: -3vw;
+    top: -2vw;
   }
   .titleContainer.shrink {
     top: 3vw;
   }
 
   .titleContainer {
-    margin-left: -63vw;
+    margin-left: 13vw;
+    top: 70vw;
   }
 }
