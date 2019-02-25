@@ -39,7 +39,11 @@ const Drawer = ({ className, showButton }) => {
       </div>
       <div
         ref={panelRef}
-        className={classnames('drawerRightSidePanel', isOpen && 'isOpen')}
+        className={classnames(
+          'drawerRightSidePanel',
+          isOpen && 'isOpen',
+          showButton && 'showButton'
+        )}
       >
         <div className="drawerContents" onClick={() => setIsOpen(false)}>
           <DrawerItem onClick={() => console.log('close mee22')}>
