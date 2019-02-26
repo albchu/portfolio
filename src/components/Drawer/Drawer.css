@@ -26,10 +26,8 @@
 
 .drawerRightSidePanel {
   width: 25vw;
-  transform: translateY(-100vh);
   height: 100vh;
   color: rgb(212, 212, 212);
-  top: 0%;
   transition: all 0.4s cubic-bezier(0.14, 0.83, 0.49, 1.01),
     opacity 0.4s ease-out;
   -webkit-transition: all 0.4s cubic-bezier(0.14, 0.83, 0.49, 1.01),
@@ -38,18 +36,14 @@
     opacity 0.4s ease-out;
   z-index: 9;
   background: #b33d64;
-  position: fixed;
+  position: absolute;
+  transform: translateX(-50vw);
+  left: 0;
   top: 12vw;
 }
 
 .drawerRightSidePanel.isOpen {
-  transform: translateY(0vh);
-  position: -webkit-sticky;
-  position: sticky;
-}
-
-.drawerRightSidePanel.isOpen.showButton {
-  position: fixed;
+  transform: translateX(0vw);
 }
 
 .drawerContents {
@@ -57,6 +51,14 @@
   z-index: 9;
   display: flex;
   flex-direction: column;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+}
+
+.drawerContents.isOpen {
+  opacity: 1;
 }
 
 @media only screen and (max-width: 800px) {

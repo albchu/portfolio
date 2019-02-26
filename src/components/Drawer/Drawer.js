@@ -45,7 +45,10 @@ const Drawer = ({ className, showButton }) => {
           showButton && 'showButton'
         )}
       >
-        <div className="drawerContents" onClick={() => setIsOpen(false)}>
+        <div
+          className={classnames('drawerContents', isOpen && 'isOpen')}
+          onClick={() => setIsOpen(false)}
+        >
           <DrawerItem onClick={() => console.log('close mee22')}>
             About
           </DrawerItem>

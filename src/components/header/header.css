@@ -5,8 +5,9 @@
   z-index: 10;
 }
 
-.lockedHeader {
-  position: fixed;
+.header__lockedHeader {
+  position: -webkit-sticky;
+  position: sticky;
   width: 100vw;
   top: 0;
   display: flex;
@@ -15,17 +16,19 @@
   height: 12vw;
 }
 
-.longHeader {
-  height: 90vh;
+.header__longHeader {
+  height: 700px;
 }
 
-.pageButtonBanner {
-  background: #b33d64;
-  text-align: center;
-  padding-bottom: 3vh;
+.header__drawerContainer {
+  position: relative;
 }
 
-.portraitContainer {
+.header__drawer {
+  position: absolute;
+}
+
+.header__portraitContainer {
   position: fixed;
   display: inline-block;
   margin-bottom: 25px;
@@ -40,7 +43,7 @@
   margin-left: 20vw;
 }
 
-.portraitContainer.shrink {
+.header__portraitContainer.shrink {
   margin-left: 1vw;
   width: 10vw;
   height: 10vw;
@@ -57,7 +60,7 @@
                                   supported by Chrome and Opera */
 }
 
-.titleContainer {
+.header__titleContainer {
   position: fixed;
   display: inline-block;
   color: #0e4f75;
@@ -74,25 +77,25 @@
   top: 10vw;
 }
 
-.titleContainer.shrink {
+.header__titleContainer.shrink {
   margin-left: 12vw;
   position: fixed;
   font-size: 2em;
   top: 4vw;
 }
 
-.rolladex {
+.header__rolladex {
   color: #0f2735;
   top: 4vw;
   font-size: 0.7em;
 }
 
-.shrink .rolladex {
+.shrink .header__rolladex {
   top: 2vw;
   font-size: 80%;
 }
 
-.shrink .name {
+.shrink .header__name {
   font-size: 5vw;
 }
 
@@ -101,87 +104,92 @@
 }
 
 @media only screen and (min-width: 801px) and (max-width: 1299px) {
-  .rolladex {
+  .header__rolladex {
     top: 4vw;
     font-size: 0.7em;
   }
-  .portraitContainer {
+
+  .header__portraitContainer {
     width: 24vw;
     height: 24vw;
     margin-left: 20vw;
   }
-  .portraitContainer.shrink {
+  .header__portraitContainer.shrink {
     top: 1vw;
   }
-  .titleContainer.shrink {
+  .header__titleContainer.shrink {
     top: 4vw;
   }
-  .shrink .rolladex {
+  .shrink .header__rolladex {
     top: 1vw;
     font-size: 60%;
   }
 }
 
 @media only screen and (min-width: 600px) and (max-width: 800px) {
-  .rolladex {
+  .header__rolladex {
     top: 4vw;
     font-size: 0.7em;
   }
-  .titleContainer.shrink {
+  .header__titleContainer.shrink {
     top: 3vw;
   }
-  .portraitContainer {
+  .header__portraitContainer {
     width: 24vw;
     height: 24vw;
     margin-left: 20vw;
   }
-  .portraitContainer.shrink {
+  .header__portraitContainer.shrink {
     top: 1vw;
   }
 
-  .shrink .rolladex {
+  .shrink .header__rolladex {
     top: 0.2vw;
     font-size: 2.5vw;
   }
 }
 
 @media only screen and (max-width: 599px) {
-  .rolladex {
+  .header__rolladex {
     top: 7vw;
     font-size: 0.4em;
   }
-  .titleContainer.shrink {
+  .header__titleContainer.shrink {
     top: 3vw;
   }
   .lockedHeader {
     height: 14vw;
   }
-  .shrink .rolladex {
+  .shrink .header__rolladex {
     top: -1vw;
     font-size: 0.4em;
   }
-  .titleContainer {
+  .header__titleContainer {
     margin-left: 22vw;
     top: 70vw;
   }
-  .portraitContainer {
+  .header__portraitContainer {
     width: 50vw;
     height: 50vw;
     margin-left: 26vw;
   }
-  .portraitContainer.shrink {
+  .header__portraitContainer.shrink {
     top: 2vw;
+  }
+
+  .header__lockedHeader {
+    height: 14vw;
   }
 }
 
 @media only screen and (max-width: 400px) {
-  .shrink .rolladex {
+  .shrink .header__rolladex {
     top: -2vw;
   }
-  .titleContainer.shrink {
+  .header__titleContainer.shrink {
     top: 3vw;
   }
-  .titleContainer {
+  .header__titleContainer {
     margin-left: 13vw;
     top: 70vw;
   }
