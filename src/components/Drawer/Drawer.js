@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { IoIosMenu } from 'react-icons/io';
 import './Drawer.css';
 import classnames from 'classnames';
-import DrawerItem from './DrawerItem';
+import DrawerContent from './DrawerContent';
 
 const Drawer = ({ className, showButton }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,17 +45,7 @@ const Drawer = ({ className, showButton }) => {
           showButton && 'showButton'
         )}
       >
-        <div
-          className={classnames('drawerContents', isOpen && 'isOpen')}
-          onClick={() => setIsOpen(false)}
-        >
-          <DrawerItem onClick={() => console.log('close mee22')}>
-            About
-          </DrawerItem>
-          <DrawerItem>Portfolio</DrawerItem>
-          <DrawerItem>Social Media</DrawerItem>
-          <DrawerItem>Contact</DrawerItem>
-        </div>
+        <DrawerContent isOpen={isOpen} onClick={() => setIsOpen(false)} />
       </div>
     </>
   );
