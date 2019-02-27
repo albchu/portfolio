@@ -3,11 +3,19 @@ import React from 'react';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Header from '../components/header';
+import About from '../components/About';
+import Portfolio from '../components/Portfolio';
+import SocialMedia from '../components/SocialMedia';
+import Contact from '../components/Contact';
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <Header />
+    <About />
+    <Portfolio />
+    <SocialMedia />
+    <Contact />
     <p>
       <strong>Scroll down to see the magic in action...</strong>
     </p>

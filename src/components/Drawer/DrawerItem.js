@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import classnames from 'classnames';
 import './DrawerItem.css';
 
 const DrawerItem = ({ children, onClick, className }) => {
+  useEffect(() => console.log('updated'));
+
   return (
     <div
       onClick={onClick}
