@@ -1,10 +1,11 @@
 import React from 'react';
 import './About.css';
+import SectionHeader from '../SectionHeader/SectionHeader';
 
 const About = () => {
   return (
     <div className="About__container">
-      <h1>ABOUT ME</h1>
+      <SectionHeader title="About" />
     </div>
   );
 };
