@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './header.css';
 import Fade from 'react-reveal/Fade';
 import classnames from 'classnames';
+import { animateScroll } from 'react-scroll';
 import Portrait from '../portrait';
 import PageUpButton from '../PageUpButton';
 import Drawer from '../Drawer';
@@ -45,9 +46,15 @@ const Header = () => {
           shrinkHeader && 'shrink'
         )}
       >
-        <Fade>
-          <Portrait />
-        </Fade>
+        <div
+          onClick={() => {
+            animateScroll.scrollToTop();
+          }}
+        >
+          <Fade>
+            <Portrait />
+          </Fade>
+        </div>
       </div>
 
       <div
