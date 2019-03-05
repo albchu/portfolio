@@ -3,8 +3,23 @@ import './About.css';
 import Plx from 'react-plx';
 import SectionHeader from '../SectionHeader';
 import AboutIntro from './AboutIntro';
+import Mountains from './Mountains';
 
-const parallaxData = [
+const containerParallax = [
+  {
+    start: 2600,
+    end: 3400,
+    properties: [
+      {
+        startValue: '#1F5182',
+        endValue: '#E6BDC1',
+        property: 'backgroundColor'
+      }
+    ]
+  }
+];
+
+const introParallax = [
   {
     start: 1800,
     end: 3400,
@@ -20,15 +35,17 @@ const parallaxData = [
 
 const About = () => {
   return (
-    <div className="About__container">
+    // <div className="About__container">
+    <Plx className="About__container" parallaxData={containerParallax}>
       <SectionHeader title="About" show={false} />
-      <Plx className="About__stickyIntro" parallaxData={parallaxData}>
+      <Plx className="About__stickyIntro" parallaxData={introParallax}>
         <div className="About__introContainer">
           <span className="About__wave">👋</span>
           <AboutIntro />
         </div>
       </Plx>
-    </div>
+    </Plx>
+    // </div>
   );
 };
 

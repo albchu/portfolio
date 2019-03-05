@@ -8,6 +8,7 @@ import Portfolio from '../components/Portfolio';
 import SocialMedia from '../components/SocialMedia';
 import Contact from '../components/Contact';
 import { trackDirectLink } from '../lib/ga';
+import AboutExperience from '../components/AboutExperience/AboutExperience';
 
 const IndexPage = () => {
   useEffect(() => {
@@ -40,6 +41,7 @@ const IndexPage = () => {
       />
       <Header />
       <About />
+      <AboutExperience />
       <Portfolio />
       <SocialMedia />
       <Contact />

@@ -1,7 +1,6 @@
 .About__container {
   height: 300vh;
-  margin: 20vh;
-  z-index: 999;
+  width: 100vw;
   overflow: unset;
 }
 
