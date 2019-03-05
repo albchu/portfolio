@@ -1,0 +1,15 @@
+.AboutIntro__Container {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 600px;
+}
+
+.AboutIntro__row {
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
+}
+
+.AboutIntro__rowCell {
+}

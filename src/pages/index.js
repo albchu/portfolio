@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Element, scroller } from 'react-scroll';
+import { scroller } from 'react-scroll';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Header from '../components/header';
@@ -39,18 +39,10 @@ const IndexPage = () => {
         ]}
       />
       <Header />
-      <Element name="about">
-        <About />
-      </Element>
-      <Element name="portfolio">
-        <Portfolio />
-      </Element>
-      <Element name="socialmedia">
-        <SocialMedia />
-      </Element>
-      <Element name="contact">
-        <Contact />
-      </Element>
+      <About />
+      <Portfolio />
+      <SocialMedia />
+      <Contact />
     </Layout>
   );
 };
