@@ -2,14 +2,13 @@
   height: 300vh;
   margin: 20vh;
   z-index: 999;
-  background-color: beige;
   overflow: unset;
 }
 
 .About__introContainer {
   display: flex;
-  border-bottom: 5px solid black;
 }
+
 .About__stickyIntro {
   height: 500px;
   position: -webkit-sticky;

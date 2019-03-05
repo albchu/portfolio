@@ -6,8 +6,8 @@ import AboutIntro from './AboutIntro';
 
 const parallaxData = [
   {
-    start: 1400,
-    end: 1800,
+    start: 1800,
+    end: 3400,
     properties: [
       {
         startValue: 1,
@@ -25,7 +25,6 @@ const About = () => {
       <Plx className="About__stickyIntro" parallaxData={parallaxData}>
         <div className="About__introContainer">
           <span className="About__wave">👋</span>
-          <div className="About__intro" />
           <AboutIntro />
         </div>
       </Plx>

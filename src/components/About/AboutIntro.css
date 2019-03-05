@@ -2,7 +2,8 @@
   display: flex;
   flex-direction: column;
   width: 300px;
-  height: 600px;
+  font-family: "Roboto Condensed", sans-serif;
+  color: #ffcf21;
 }
 
 .AboutIntro__row {
@@ -11,5 +12,48 @@
   white-space: nowrap;
 }
 
-.AboutIntro__rowCell {
+.AboutIntro__cell {
+  margin: 5px 5px;
+  font-weight: 500;
+  font-size: 50px;
+}
+
+.AboutIntro__emphasis {
+  font-weight: 700;
+}
+
+.AboutIntro__cellPart {
+  margin-top: 15px;
+}
+
+.AboutIntro__locationPart1 {
+  font-size: 45px;
+}
+
+.AboutIntro__locationPart2 {
+  font-size: 37px;
+}
+
+.AboutIntro__cellPartCanada {
+  margin-bottom: 10px;
+}
+
+.AboutIntro__location {
+  display: flex;
+  align-items: flex-end;
+}
+
+.AboutIntro__missionPart1 {
+  margin-top: 10px;
+  font-size: 46px;
+}
+
+.AboutIntro__missionPart2 {
+  margin-top: 18px;
+  font-size: 62px;
+}
+
+.AboutIntro__missionPart3 {
+  margin-top: 16px;
+  font-size: 39.5px;
 }
