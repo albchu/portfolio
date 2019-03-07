@@ -1,5 +1,5 @@
 import React from 'react';
-import './AboutIntro.css';
+import './AboutIntroText.css';
 import Plx from 'react-plx';
 
 const emphasisTextFullStack = [
@@ -60,14 +60,14 @@ const emphasisTextCanada = [
   }
 ];
 
-const AboutIntro = () => {
+const AboutIntroText = () => {
   return (
-    <div className="AboutIntro__Container">
-      <div className="AboutIntro__row">
-        <div className="AboutIntro__cell">I'm a</div>
-        <div className="AboutIntro__cell">
+    <div className="AboutIntroText__Container">
+      <div className="AboutIntroText__row">
+        <div className="AboutIntroText__cell">I'm a</div>
+        <div className="AboutIntroText__cell">
           <Plx
-            className="AboutIntro__emphasis"
+            className="AboutIntroText__emphasis"
             parallaxData={emphasisTextFullStack}
           >
             full stack developer
@@ -75,36 +75,36 @@ const AboutIntro = () => {
         </div>
       </div>
 
-      <div className="AboutIntro__row AboutIntro__location">
-        <div className="AboutIntro__cell">
-          <div className="AboutIntro__cellPart AboutIntro__locationPart1">
+      <div className="AboutIntroText__row AboutIntroText__location">
+        <div className="AboutIntroText__cell">
+          <div className="AboutIntroText__cellPart AboutIntroText__locationPart1">
             based out of
           </div>
-          <div className="AboutIntro__cellPart AboutIntro__locationPart2">
+          <div className="AboutIntroText__cellPart AboutIntroText__locationPart2">
             Calgary, Alberta
           </div>
         </div>
-        <div className="AboutIntro__cell AboutIntro__cellPart AboutIntro__cellPartCanada ">
+        <div className="AboutIntroText__cell AboutIntroText__cellPart AboutIntroText__cellPartCanada ">
           <Plx
-            className="AboutIntro__emphasis"
+            className="AboutIntroText__emphasis"
             parallaxData={emphasisTextCanada}
           >
             Canada.
           </Plx>
         </div>
       </div>
-      <div className="AboutIntro__row">
-        <div className="AboutIntro__cell AboutIntro__missionPart1">
+      <div className="AboutIntroText__row">
+        <div className="AboutIntroText__cell AboutIntroText__missionPart1">
           I am always seeking new and
         </div>
       </div>
-      <div className="AboutIntro__row">
-        <div className="AboutIntro__cell AboutIntro__missionPart2">
+      <div className="AboutIntroText__row">
+        <div className="AboutIntroText__cell AboutIntroText__missionPart2">
           exciting opportunities
         </div>
       </div>
-      <div className="AboutIntro__row">
-        <div className="AboutIntro__cell AboutIntro__missionPart3">
+      <div className="AboutIntroText__row">
+        <div className="AboutIntroText__cell AboutIntroText__missionPart3">
           to explore and improve at my craft
         </div>
       </div>
@@ -112,4 +112,4 @@ const AboutIntro = () => {
   );
 };
 
-export default AboutIntro;
+export default AboutIntroText;

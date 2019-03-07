@@ -1,24 +1,25 @@
-.About__container {
+.AboutIntro__container {
+  margin-top: 50vh;
   height: 300vh;
   width: 100vw;
   overflow: unset;
 }
 
-.About__introContainer {
+.AboutIntro__introContainer {
   display: flex;
 }
 
-.About__stickyIntro {
+.AboutIntro__stickyIntro {
   height: 500px;
   position: -webkit-sticky;
   position: sticky;
-  top: 18rem;
+  top: 20rem;
 }
 
-.About__wave {
+.AboutIntro__wave {
   font-size: 10em;
 }
 
-.About__intro {
+.AboutIntro__intro {
   padding: 8vh 2vw;
 }

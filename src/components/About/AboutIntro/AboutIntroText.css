@@ -1,4 +1,4 @@
-.AboutIntro__Container {
+.AboutIntroText__Container {
   display: flex;
   flex-direction: column;
   width: 300px;
@@ -6,54 +6,54 @@
   color: #ffcf21;
 }
 
-.AboutIntro__row {
+.AboutIntroText__row {
   display: flex;
   flex-direction: row;
   white-space: nowrap;
 }
 
-.AboutIntro__cell {
+.AboutIntroText__cell {
   margin: 5px 5px;
   font-weight: 500;
   font-size: 50px;
 }
 
-.AboutIntro__emphasis {
+.AboutIntroText__emphasis {
   font-weight: 700;
 }
 
-.AboutIntro__cellPart {
+.AboutIntroText__cellPart {
   margin-top: 15px;
 }
 
-.AboutIntro__locationPart1 {
+.AboutIntroText__locationPart1 {
   font-size: 45px;
 }
 
-.AboutIntro__locationPart2 {
+.AboutIntroText__locationPart2 {
   font-size: 37px;
 }
 
-.AboutIntro__cellPartCanada {
+.AboutIntroText__cellPartCanada {
   margin-bottom: 10px;
 }
 
-.AboutIntro__location {
+.AboutIntroText__location {
   display: flex;
   align-items: flex-end;
 }
 
-.AboutIntro__missionPart1 {
+.AboutIntroText__missionPart1 {
   margin-top: 10px;
   font-size: 46px;
 }
 
-.AboutIntro__missionPart2 {
+.AboutIntroText__missionPart2 {
   margin-top: 18px;
   font-size: 62px;
 }
 
-.AboutIntro__missionPart3 {
+.AboutIntroText__missionPart3 {
   margin-top: 16px;
   font-size: 39.5px;
 }

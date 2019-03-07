@@ -15,6 +15,7 @@ const DESCRIPTORS = ['Node.js', 'React', 'UX', 'Full Stack Developer'];
 const onScroll = (setShrinkHeader, setWordIndex) => () => {
   const scrolled = window.scrollY;
 
+  console.log('You have scrolled', scrolled);
   if (scrolled < SHRINK_THRESHOLD) {
     setShrinkHeader(false);
   } else if (scrolled >= SHRINK_THRESHOLD) {

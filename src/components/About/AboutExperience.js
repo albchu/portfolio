@@ -1,7 +1,7 @@
 import React from 'react';
 import './AboutExperience.css';
 import SectionHeader from '../SectionHeader/SectionHeader';
-import Mountains from '../About/Mountains';
+import Mountains from './Mountains';
 
 const AboutExperience = () => {
   return (
