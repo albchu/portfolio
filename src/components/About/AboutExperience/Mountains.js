@@ -21,7 +21,7 @@ const Mountains = ({ className }) => (
           relativePath: { eq: "filip-zrnzevic-1379463-unsplash.jpg" }
         ) {
           childImageSharp {
-            fluid(maxWidth: 1800) {
+            fluid(maxWidth: 2700) {
               ...GatsbyImageSharpFluid
             }
           }
