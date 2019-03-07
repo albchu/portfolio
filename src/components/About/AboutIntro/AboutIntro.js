@@ -7,40 +7,27 @@ import './AboutIntro.css';
 const containerParallax = [
   {
     start: 2600,
-    end: 3400,
+    end: 3100,
     properties: [
       {
         startValue: '#1F5182',
-        endValue: '#E6BDC1',
+        endValue: '#F3A981',
         property: 'backgroundColor'
       }
     ]
   }
 ];
 
-const introParallax = [
-  {
-    start: 1800,
-    end: 3400,
-    properties: [
-      {
-        startValue: 1,
-        endValue: 0,
-        property: 'opacity'
-      }
-    ]
-  }
-];
 const AboutIntro = () => {
   return (
     <Plx className="AboutIntro__container" parallaxData={containerParallax}>
       <SectionHeader title="AboutIntro" show={false} />
-      <Plx className="AboutIntro__stickyIntro" parallaxData={introParallax}>
+      <div className="AboutIntro__stickyIntro">
         <div className="AboutIntro__introContainer">
           <span className="AboutIntro__wave">👋</span>
           <AboutIntroText />
         </div>
-      </Plx>
+      </div>
     </Plx>
   );
 };

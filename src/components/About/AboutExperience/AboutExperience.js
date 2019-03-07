@@ -8,9 +8,9 @@ const AboutExperience = () => {
   return (
     <div className="AboutExperience__container">
       <SectionHeader title="AboutExperience" show={false} />
-      <div className="AboutExperience__mountainContainer">
+      <div>
         <AboutExperienceText />
-        <Mountains />
+        <Mountains className="AboutExperience__mountainContainer" />
       </div>
     </div>
   );

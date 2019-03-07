@@ -1,12 +1,13 @@
 .AboutIntro__container {
   margin-top: 50vh;
-  height: 300vh;
+  height: 250vh;
   width: 100vw;
   overflow: unset;
 }
 
 .AboutIntro__introContainer {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .AboutIntro__stickyIntro {

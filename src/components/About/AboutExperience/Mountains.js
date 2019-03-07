@@ -18,10 +18,10 @@ const Mountains = ({ className }) => (
     query={graphql`
       query {
         placeholderImage: file(
-          relativePath: { eq: "filip-zrnzevic-1379463-unsplash.jpg" }
+          relativePath: { eq: "mountains_transparent.png" }
         ) {
           childImageSharp {
-            fluid(maxWidth: 2700) {
+            fluid(maxWidth: 1920) {
               ...GatsbyImageSharpFluid
             }
           }
