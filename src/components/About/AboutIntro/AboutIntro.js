@@ -1,5 +1,7 @@
 import React from 'react';
 import Plx from 'react-plx';
+import { IoMdHand } from 'react-icons/io';
+
 import SectionHeader from '../../SectionHeader';
 import AboutIntroText from './AboutIntroText';
 import './AboutIntro.css';
@@ -24,7 +26,7 @@ const AboutIntro = () => {
       <SectionHeader title="AboutIntro" show={false} />
       <div className="AboutIntro__stickyIntro">
         <div className="AboutIntro__introContainer">
-          <span className="AboutIntro__wave">👋</span>
+          <IoMdHand className="AboutIntro__wave" />
           <AboutIntroText />
         </div>
       </div>

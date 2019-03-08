@@ -1,5 +1,5 @@
 .AboutIntro__container {
-  margin-top: 50vh;
+  margin-top: 40vh;
   height: 250vh;
   width: 100vw;
   overflow: unset;
@@ -8,6 +8,7 @@
 .AboutIntro__introContainer {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .AboutIntro__stickyIntro {
@@ -18,7 +19,22 @@
 }
 
 .AboutIntro__wave {
-  font-size: 10em;
+  font-size: 8em;
+  margin-left: -1.5em;
+  animation: wave 2s ease-in-out alternate 6;
+  transform-origin: bottom center;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 .AboutIntro__intro {
