@@ -21,8 +21,12 @@
 .AboutIntro__wave {
   font-size: 8em;
   margin-left: -1.5em;
-  animation: wave 2s ease-in-out alternate 6;
   transform-origin: bottom center;
+  animation: wave 2s ease-in-out alternate 2;
+}
+
+.AboutIntro__wave:active {
+  animation: wave 2s ease-in-out alternate 3;
 }
 
 @keyframes wave {

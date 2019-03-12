@@ -1,0 +1,141 @@
+.HeaderTitle__titleContainer {
+  position: fixed;
+  display: inline-block;
+  white-space: nowrap;
+  font-family: "Roboto Condensed", sans-serif;
+  transition: all 0.4s cubic-bezier(0.86, 0.38, 0, 0.99);
+  -webkit-transition: all 0.4s cubic-bezier(0.86, 0.38, 0, 0.99);
+  -moz-transition: all 0.4s cubic-bezier(0.86, 0.38, 0, 0.99);
+  z-index: 11;
+  margin-left: 48vw;
+  font-weight: 600;
+  top: 20vw;
+}
+
+.HeaderTitle__titleContainer--shrink {
+  margin-left: 180px;
+  top: 2vw;
+}
+
+.HeaderTitle__name {
+  color: #0e4f75;
+  font-size: 9em;
+  transition: all 0.4s cubic-bezier(0.86, 0.38, 0, 0.99);
+  -webkit-transition: all 0.4s cubic-bezier(0.86, 0.38, 0, 0.99);
+  -moz-transition: all 0.4s cubic-bezier(0.86, 0.38, 0, 0.99);
+}
+
+.HeaderTitle__name--shrink {
+  font-size: 3em;
+}
+
+.HeaderTitle__rolladex {
+  color: #0f2735;
+  top: 6vw;
+  font-size: 4em;
+}
+
+.HeaderTitle__rolladex--shrink {
+  top: 1vw;
+  font-size: 1.8em;
+}
+
+@media only screen and (max-width: 1200px) {
+  .HeaderTitle__name {
+    font-size: 7em;
+  }
+
+  .HeaderTitle__name--shrink {
+    font-size: 3em;
+  }
+
+  .HeaderTitle__titleContainer {
+    margin-left: 26vw;
+    top: 60vw;
+  }
+
+  .HeaderTitle__titleContainer--shrink {
+    margin-left: 100px;
+    top: 2vh;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .HeaderTitle__name {
+    font-size: 5em;
+  }
+
+  .HeaderTitle__name--shrink {
+    font-size: 2em;
+  }
+
+  .HeaderTitle__titleContainer {
+    top: 60vw;
+  }
+
+  .HeaderTitle__titleContainer--shrink {
+    margin-left: 100px;
+    top: 2vh;
+  }
+
+  .HeaderTitle__rolladex {
+    font-size: 3em;
+  }
+
+  .HeaderTitle__rolladex--shrink {
+    font-size: 1.5em;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .HeaderTitle__name {
+    font-size: 4em;
+  }
+
+  .HeaderTitle__name--shrink {
+    font-size: 1.8em;
+  }
+
+  .HeaderTitle__titleContainer {
+    top: 62vw;
+  }
+
+  .HeaderTitle__titleContainer--shrink {
+    margin-left: 80px;
+    top: 1.5vh;
+  }
+
+  .HeaderTitle__rolladex {
+    font-size: 2em;
+  }
+
+  .HeaderTitle__rolladex--shrink {
+    font-size: 1.2em;
+    top: 0px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .HeaderTitle__name {
+    font-size: 3em;
+  }
+
+  .HeaderTitle__name--shrink {
+    font-size: 1.4em;
+  }
+
+  .HeaderTitle__titleContainer {
+    top: 68vw;
+  }
+
+  .HeaderTitle__titleContainer--shrink {
+    margin-left: 55px;
+    top: 1.5vh;
+  }
+
+  .HeaderTitle__rolladex--shrink {
+    font-size: 0.9em;
+    font-weight: 500;
+    top: -5px;
+  }
+}
