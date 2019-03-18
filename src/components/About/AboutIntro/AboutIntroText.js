@@ -21,11 +21,6 @@ const emphasisTextFullStack = [
         startValue: 0,
         endValue: -2,
         property: 'translateY'
-      },
-      {
-        startValue: '#FFCF21',
-        endValue: '#D26200',
-        property: 'color'
       }
     ]
   }
@@ -50,11 +45,6 @@ const emphasisTextCanada = [
         startValue: 0,
         endValue: -14,
         property: 'translateY'
-      },
-      {
-        startValue: '#FFCF21',
-        endValue: '#D26200',
-        property: 'color'
       }
     ]
   }

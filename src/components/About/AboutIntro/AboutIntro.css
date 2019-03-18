@@ -1,5 +1,5 @@
 .AboutIntro__container {
-  height: 180vh;
+  height: 150vh;
   width: 100vw;
   overflow: unset;
 }
@@ -19,6 +19,9 @@
 
 .AboutIntro__wave {
   font-size: 8em;
+  color: rgb(0, 0, 0, 0);
+  stroke: #313131;
+  stroke-width: 15px;
   margin-left: -1.5em;
   transform-origin: bottom center;
   animation: wave 2s ease-in-out alternate 2;

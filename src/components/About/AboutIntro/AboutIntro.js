@@ -20,9 +20,9 @@ const containerParallax = [
   }
 ];
 
-const containerParallax2 = [
+const introTextEffect = [
   {
-    start: '.StickyText-trigger',
+    start: '.AboutIntroText-trigger',
     startOffset: '150vh',
     duration: '30vh',
     properties: [
@@ -42,18 +42,13 @@ const AboutIntro = () => {
       <div className="ColorChange-trigger" />
       <Plx className="AboutIntro__container" parallaxData={containerParallax}>
         <SectionHeader title="AboutIntro" show={false} />
-        <div className="StickyText-trigger" />
-        <Plx
-          className="AboutIntro__stickyIntro"
-          parallaxData={containerParallax2}
-        >
-          {/* <div className="AboutIntro__stickyIntro"> */}
+        <div className="AboutIntroText-trigger" />
+        <Plx className="AboutIntro__stickyIntro" parallaxData={introTextEffect}>
           <div className="AboutIntro__introContainer">
             <IoMdHand className="AboutIntro__wave" />
             <AboutIntroText />
           </div>
         </Plx>
-        {/* </div> */}
       </Plx>
     </>
   );
