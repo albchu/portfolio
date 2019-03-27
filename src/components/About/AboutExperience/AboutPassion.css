@@ -1,0 +1,6 @@
+.AboutPassion__container {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 35vh;
+  opacity: 0;
+}

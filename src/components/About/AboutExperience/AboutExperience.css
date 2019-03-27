@@ -1,12 +1,16 @@
 .AboutExperience__container {
   background-color: #eea583;
   width: 100vw;
-  height: 300vw;
+  height: 240vw;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  font-size: 50px;
+  font-family: "Roboto Condensed", sans-serif;
+  color: #353535;
 }
-
 .AboutExperience__mountainContainer {
-  background-color: #eea583;
+  width: 100vw;
 }
