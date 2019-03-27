@@ -1,5 +1,59 @@
 .AboutExperienceText__container {
-  background-color: #eea583;
-  color: black;
+  font-weight: 500;
   font-size: 50px;
+  font-family: "Roboto Condensed", sans-serif;
+  color: #353535;
+  height: 80vh;
+  width: 100vw;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 35vh;
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+  margin-left: 20vw;
+}
+
+@media only screen and (max-width: 700px) {
+  .AboutExperienceText__container {
+    transform: scale(0.6);
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .AboutExperienceText__container {
+    transform: scale(0.5);
+    margin-left: -5vw;
+  }
+}
+
+.AboutExperienceText__Row_1 {
+  font-size: 40px;
+  margin-bottom: 16px;
+  width: 100vw;
+}
+
+.AboutExperienceText__Row_2 {
+  font-weight: 700;
+  font-size: 53px;
+  margin-bottom: 20px;
+}
+
+.AboutExperienceText__Row_3 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.AboutExperienceText__Row_4 {
+  font-weight: 700;
+  font-size: 153px;
+  margin-top: 40px;
+  height: 100px;
+}
+
+.AboutExperienceText__Row_5 {
+  font-size: 44px;
+  margin-top: 10px;
+  height: 50px;
 }

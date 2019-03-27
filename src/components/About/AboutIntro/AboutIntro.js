@@ -9,10 +9,11 @@ import './AboutIntro.css';
 const containerParallax = [
   {
     start: '.ColorChange-trigger',
-    duration: '180vh',
+    startOffset: '60vh',
+    duration: '90vh',
     properties: [
       {
-        startValue: '#00121d',
+        startValue: '#002F4B',
         endValue: '#EEA583',
         property: 'backgroundColor'
       }
