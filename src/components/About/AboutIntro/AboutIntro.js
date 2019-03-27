@@ -23,6 +23,30 @@ const containerParallax = [
 const introTextEffect = [
   {
     start: '.AboutIntroText-trigger',
+    startOffset: '60vh',
+    duration: '50vh',
+    properties: [
+      {
+        startValue: 0.7,
+        endValue: 1,
+        property: 'scale'
+      }
+    ]
+  },
+  {
+    start: '.AboutIntroText-trigger',
+    startOffset: '20vh',
+    duration: '50vh',
+    properties: [
+      {
+        startValue: 0,
+        endValue: 1,
+        property: 'opacity'
+      }
+    ]
+  },
+  {
+    start: '.AboutIntroText-trigger',
     startOffset: '150vh',
     duration: '30vh',
     properties: [
